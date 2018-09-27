@@ -7,7 +7,7 @@
     "url": "git+https://github.com/vpapp-team/backend-api.git"
   },
   "author": "Tobias Kutscha (https://github.com/TimeForANinja)",
-  "main": "index.js",
+  "main": "./lib/Master.js",
   "scripts": {
     "test": "npm run lint",
     "lint": "eslint ./",
@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/vpapp-team/backend-api/issues"
   },
-  "license": "GPLv3"
+  "license": "GPLv3",
+  "dependencies": {
+    "backend-types": "github:vpapp-team/backend-types",
+    "backend-util": "github:vpapp-team/backend-util",
+    "mysql": "^2.16.0"
+  }
 }
