@@ -1,6 +1,8 @@
 {
-  "general": {
-    "SECURE_CONTEXT": {},
-    "publicKey": "config_old.js"
+  "mysql_read": {
+    "host": "nigb.app",
+    "user": "",
+    "password": "",
+    "database": "NIGB"
   }
 }

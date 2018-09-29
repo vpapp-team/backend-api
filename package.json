@@ -24,6 +24,7 @@
   },
   "license": "GPLv3",
   "dependencies": {
+    "backend-logger": "github:vpapp-team/backend-logger",
     "backend-types": "github:vpapp-team/backend-types",
     "backend-util": "github:vpapp-team/backend-util",
     "mysql": "^2.16.0"
