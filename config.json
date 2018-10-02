@@ -4,5 +4,15 @@
     "user": "",
     "password": "",
     "database": "NIGB"
+  },
+  "serverConfig": {
+    "host": "localhost",
+    "port": 433,
+    "method": "SUBSCRIBE",
+    "path": "/validate",
+    "https": false,
+    "isSameServer": true,
+    "ep": ["api"],
+    "signature": "..."
   }
 }
