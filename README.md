@@ -14,7 +14,7 @@
 >
 > ## existing modules:
 > > | name | type | payload | args | Master <- Worker | Master -> Worker | additional information |
-> > | --- | --- | --- | --- | --- |
+> > | --- | --- | --- | --- | --- | --- | --- |
 > > | `version` | `version` | [[versions](https://github.com/vpapp-team/backend-types/blob/master/README.md#version)] | / | ❌ | ✔  | get send after the worker fires the `online` event and when the versions changed |
 > > | `validationRequest` | `validationRequest` | `boolean:validReqID` | `[string:proxyUUID, string:reqID]` | ✔ | ✔ | the proxy send a validation request, responds whether it was the right request |
 > > | `dataChangeRequest` | `dataChangeRequest` | / | `[string:proxyUUID]` | ✔ | ❌ | someone told the proxy to broadcast a data change |
@@ -29,7 +29,7 @@
 
 # Config
 | property | type | default | optional | description |
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | mysql_read | object | / | false | readonly connection to mysql db |
 | mysql_read.connectionLimit | number | 10 | true | max simultaneous connections |
 | mysql_read.charset | string | `UTF8MB4_GENERAL_CI` | true | charset of the connection |
