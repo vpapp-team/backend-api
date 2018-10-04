@@ -14,5 +14,12 @@
     "isSameServer": true,
     "ep": ["api"],
     "signature": "..."
+  },
+  "ONLY_SIGNED_PROXY": false,
+  "proxy": {
+    "hostname": "proxy.nigb.app",
+    "port": 443,
+    "method": "CONNECT",
+    "url": "/login"
   }
 }
