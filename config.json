@@ -21,5 +21,9 @@
     "port": 443,
     "method": "CONNECT",
     "url": "/login"
+  },
+  "snowflake": {
+    "datacenter": 1,
+    "host": "server1.nigb.app"
   }
 }

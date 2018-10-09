@@ -6,7 +6,7 @@
 > ## ipc message layout:
 > > | property | type | possible values | optional | description |
 > > | --- | --- | --- | --- | --- |
-> > | type | string | `version`, `masterRequest`, `dataChangeRequest` or `validationRequest` | `version` only when `Master->Worker`, `validationRequest` and `dataChangeRequest` only when `Master<-Worker` | type of the message |
+> > | type | string | `Endpoints`, `masterRequest`, `dataChangeRequest` or `validationRequest` | `Endpoints` only when `Master->Worker`, `validationRequest` and `dataChangeRequest` only when `Master<-Worker` | type of the message |
 > > | uuid | [uuid](https://github.com/vpapp-team/backend-types/blob/master/README.md#uuid) | / | only provided when `type=masterRequest` or `type=validationRequest` | uuid to match response to request |
 > > | module | string | [see below](#existing%20modules) | false | the module that gets requested / responds |
 > > | payload | [see below](#existing%20modules) | [see below](#existing%20modules) | only provided when `Master->Worker` | the payload itself |
@@ -15,7 +15,7 @@
 > ## existing modules:
 > > | name | type | payload | args | Master <- Worker | Master -> Worker | additional information |
 > > | --- | --- | --- | --- | --- | --- | --- |
-> > | `version` | `version` | [[versions](https://github.com/vpapp-team/backend-types/blob/master/README.md#version)] | / | ❌ | ✔  | get send after the worker fires the `online` event and when the versions changed |
+> > | `Endpoints` | `Endpoints` | [[Endpoints](https://github.com/vpapp-team/backend-types/blob/master/README.md#endpoints)] | / | ❌ | ✔  | get send after the worker fires the `online` event and when the versions changed |
 > > | `validationRequest` | `validationRequest` | `boolean:validReqID` | `[string:proxyUUID, string:reqID]` | ✔ | ✔ | the proxy send a validation request, responds whether it was the right request |
 > > | `dataChangeRequest` | `dataChangeRequest` | / | `[string:proxyUUID]` | ✔ | ❌ | someone told the proxy to broadcast a data change |
 > > | `/v1.0.0/Calendar` | `masterRequest` ||| ✔ | ✔ | / |
@@ -50,6 +50,9 @@
 | mysql_read.user | string | / | false | mysql user name |
 | mysql_read.password | string | / | false | mysql password |
 | mysql_read.database | string | / | false | mysql db name |
+| snowflake.epoche | number | `1515151515151` | true | time to offset snowflake timestamps |
+| snowflake.datacenter | number | / | false | datacenter id, min 0, max 15 |
+| snowflake.host | string | / | false | host name for this server, used when creating UUID'S |
 | serverConfig | object | / | false | self information to register to proxy |
 | serverConfig.host | string | / | false | own host domain/ip |
 | serverConfig.port | number | / | false | own host port |
