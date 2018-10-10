@@ -13,6 +13,12 @@
     "lint": "eslint ./",
     "lint:fix": "eslint --fix ./"
   },
+  "dependencies": {
+    "backend-logger": "github:vpapp-team/backend-logger",
+    "backend-types": "github:vpapp-team/backend-types",
+    "backend-util": "github:vpapp-team/backend-util",
+    "mysql": "^2.16.0"
+  },
   "devDependencies": {
     "eslint": "^5.0.0"
   },
@@ -22,11 +28,5 @@
   "bugs": {
     "url": "https://github.com/vpapp-team/backend-api/issues"
   },
-  "license": "GPLv3",
-  "dependencies": {
-    "backend-logger": "github:vpapp-team/backend-logger",
-    "backend-types": "github:vpapp-team/backend-types",
-    "backend-util": "github:vpapp-team/backend-util",
-    "mysql": "^2.16.0"
-  }
+  "license": "GPLv3"
 }
