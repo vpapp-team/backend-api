@@ -46,22 +46,24 @@
 | mysql_read.tables.VERSIONS | string | `Versions` | true | VERSIONS mapping |
 | mysql_read.tables.BACKENDS | string | `Backends` | true | BACKENDS mapping |
 | mysql_read.tables.WEBADMINS | string | `WebAdmins` | true | WEBADMINS mapping |
-| mysql_read.host | string | / | false | the mysql host domain/ip |
+| mysql_read.hostname | string | / | false | the mysql host domain/ip |
+| mysql_read.port | number | `3306` | true | the mysql host port |
 | mysql_read.user | string | / | false | mysql user name |
 | mysql_read.password | string | / | false | mysql password |
 | mysql_read.database | string | / | false | mysql db name |
 | snowflake.epoche | number | `1515151515151` | true | time to offset snowflake timestamps |
 | snowflake.datacenter | number | / | false | datacenter id, min 0, max 15 |
-| snowflake.host | string | / | false | host name for this server, used when creating UUID'S |
-| serverConfig | object | / | false | self information to register to proxy |
-| serverConfig.host | string | / | false | own host domain/ip |
+| snowflake.hostname | string | / | false | host name for this server, used when creating UUID'S |
+| serverConfig | object | / | false | self information to register to proxy, related to [workerServer](https://github.com/vpapp-team/backend-proxy/blob/master/README.md#workerServer) |
+| serverConfig.hostname | string | / | only required when using a proxy | own host domain/ip |
 | serverConfig.port | number | / | false | own host port |
-| serverConfig.method | string | / | false | method for validation requests |
-| serverConfig.path | string | / | false | path for validation requests |
+| serverConfig.method | string | / | only required when using a proxy | method for validation requests |
+| serverConfig.path | string | / | only required when using a proxy | path for validation requests |
 | serverConfig.https | boolean | / | false | whether to use https |
-| serverConfig.isSameServer | boolean | / | false | whether the proxy is on the same server (localhost) |
-| serverConfig.ep | [string] | / | false | list of endpoints to assign to |
-| serverConfig.signature | string | / | false | signature of the serverConfig |
+| serverConfig.validateCert | boolean | / | false | whether to accept self signed certificates |
+| serverConfig.isSameServer | boolean | / | only required when using a proxy | whether the proxy is on the same server (localhost) |
+| serverConfig.ep | [string] | / | only required when using a proxy | list of endpoints to assign to |
+| serverConfig.signature | string | / | only required when using a proxy | signature of the serverConfig |
 | proxy | [clientLocation](https://github.com/vpapp-team/backend-proxy/blob/master/README.md#clientlocation) | / | true | a proxy to register to |
 | SECURE_CONTEXT | object | / | required when serverConfig.https == true | [options to pass to the https.createServer func](https://nodejs.org/api/https.html#https_https_createserver_options_requestlistener)
 | ONLY_SIGNED_PROXY | boolean | true | true | whether the proxy has to have valid ssl set up |
