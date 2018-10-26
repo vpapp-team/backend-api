@@ -24,6 +24,6 @@
   },
   "snowflake": {
     "datacenter": 1,
-    "host": "server1.nigb.app"
+    "hostname": "server1.nigb.app"
   }
 }
