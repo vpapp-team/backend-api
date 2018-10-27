@@ -1,6 +1,6 @@
 {
   "mysql_read": {
-    "host": "nigb.app",
+    "hostname": "nigb.app",
     "user": "",
     "password": "",
     "database": "NIGB"
