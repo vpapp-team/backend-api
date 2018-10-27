@@ -66,7 +66,7 @@
 | serverConfig.signature | string | / | only required when using a proxy | signature of the serverConfig |
 | proxy | [clientLocation](https://github.com/vpapp-team/backend-proxy/blob/master/README.md#clientlocation) | / | true | a proxy to register to |
 | proxy.secure | boolean | true | true | extends [clientLocation](https://github.com/vpapp-team/backend-proxy/blob/master/README.md#clientlocation) to decide whether to use https(secure=true) or http(secure=false) |
-| SECURE_CONTEXT | object | / | required when serverConfig.https == true | [options to pass to the https.createServer func](https://nodejs.org/api/https.html#https_https_createserver_options_requestlistener)
+| SECURE_CONTEXT | object | / | required when serverConfig.https == true | [options to pass to the https.createServer func](https://nodejs.org/api/https.html#https_https_createserver_options_requestlistener) - please use absolute paths |
 | ONLY_SIGNED_PROXY | boolean | true | true | whether the proxy has to have valid ssl set up |
 | BACKUP_DATA_CHECK_INTERVAL | number | 1 \* 60 \* 60 \* 1000 | true | interval to check for data |
 | REGISTER_INTERVAL | number | 5 \* 60 \* 1000 | true | interval to register at proxy |
