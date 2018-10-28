@@ -62,7 +62,8 @@
 | serverConfig.https | boolean | / | false | whether to use https |
 | serverConfig.validateCert | boolean | / | false | whether to accept self signed certificates |
 | serverConfig.isSameServer | boolean | / | only required when using a proxy | whether the proxy is on the same server (localhost) |
-| serverConfig.ep | [string] | / | only required when using a proxy | list of endpoints to assign to |
+| serverConfig.receiveEP | [string] | / | only required when using a proxy | list of endpoints to assign to |
+| serverConfig.broadcastEP | [string] | / | only required when using a proxy | list of endpoints to assign to |
 | serverConfig.signature | string | / | only required when using a proxy | signature of the serverConfig |
 | proxy | [clientLocation](https://github.com/vpapp-team/backend-proxy/blob/master/README.md#clientlocation) | / | true | a proxy to register to |
 | proxy.secure | boolean | true | true | extends [clientLocation](https://github.com/vpapp-team/backend-proxy/blob/master/README.md#clientlocation) to decide whether to use https(secure=true) or http(secure=false) |
