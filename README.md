@@ -60,8 +60,6 @@
 | serverConfig.method | string | / | only required when using a proxy | method for validation requests |
 | serverConfig.path | string | / | only required when using a proxy | path for validation requests |
 | serverConfig.https | boolean | / | false | whether to use https |
-| serverConfig.validateCert | boolean | / | false | whether to accept self signed certificates |
-| serverConfig.isSameServer | boolean | / | only required when using a proxy | whether the proxy is on the same server (localhost) |
 | serverConfig.receiveEP | [string] | / | only required when using a proxy | list of endpoints to assign to |
 | serverConfig.broadcastEP | [string] | / | only required when using a proxy | list of endpoints to assign to |
 | serverConfig.signature | string | / | only required when using a proxy | signature of the serverConfig |
