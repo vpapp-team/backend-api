@@ -17,7 +17,7 @@
     "backend-logger": "github:vpapp-team/backend-logger",
     "backend-types": "github:vpapp-team/backend-types",
     "backend-util": "github:vpapp-team/backend-util",
-    "mysql": "^2.16.0"
+    "mysql": "^2.17.0"
   },
   "devDependencies": {
     "eslint": "^5.0.0"
